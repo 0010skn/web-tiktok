@@ -11,7 +11,7 @@
 
 ## ✨ 在线演示
 
-- [在线体验地址](https://0010skn.github.io/web-douyin/)
+- [在线体验地址](https://0010skn.github.io/web-tiktok/)
 
 ## 🎯 主要功能
 
@@ -37,7 +37,7 @@
 ## 📦 快速开始
 
 1. 克隆项目
-git clone https://github.com/0010skn/web-douyin.git
+git clone https://github.com/0010skn/web-tiktok.git
 2. 进入项目目录
 3. 启动本地服务器
 使用 Python 3
@@ -80,7 +80,7 @@ npx http-server
 
 - [Font Awesome](https://fontawesome.com/) - 图标库
 - [Picsum Photos](https://picsum.photos/) - 示例图片
-# Web Douyin (TikTok Clone)
+# Web TikTok (TikTok Clone)
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
@@ -93,7 +93,7 @@ English | [简体中文](./README.md)
 
 ## ✨ Live Demo
 
-- [Live Demo](https://0010skn.github.io/web-douyin/)
+- [Live Demo](https://0010skn.github.io/web-tiktok/)
 
 ## 🎯 Features
 
