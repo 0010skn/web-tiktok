@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <!-- SEO优化 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="一个基于HTML5、CSS3和原生JavaScript开发的短视频应用，模仿抖音/TikTok的核心功能和界面设计">
+    <meta name="keywords" content="短视频,抖音,TikTok,前端开源项目,HTML5,CSS3,JavaScript,Web应用">
+    <meta name="author" content="Your Name">
+    <meta name="theme-color" content="#000000">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="Web版抖音 - 开源短视频前端应用">
+    <meta property="og:description" content="一个基于HTML5、CSS3和原生JavaScript开发的短视频应用，模仿抖音/TikTok的核心功能和界面设计">
+    <meta property="og:image" content="https://your-domain.com/preview.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:title" content="Web版抖音 - 开源短视频前端应用">
+    <meta property="twitter:description" content="一个基于HTML5、CSS3和原生JavaScript开发的短视频应用，模仿抖音/TikTok的核心功能和界面设计">
+    <meta property="twitter:image" content="https://your-domain.com/preview.jpg">
+    <!-- iOS优化 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web版抖音">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <!-- PWA支持 -->
+    <link rel="manifest" href="/manifest.json">
+    <title>Web版抖音 - 开源短视频前端应用</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <div class="video-container">
+                <!-- 视频将通过JavaScript动态添加 -->
+            </div>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <nav class="tab-bar">
+            <a href="index.html" class="tab-item active">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="discover.html" class="tab-item">
+                <i class="fas fa-compass"></i>
+                <span>发现</span>
+            </a>
+            <a href="notifications.html" class="tab-item">
+                <i class="fas fa-bell"></i>
+                <span>通知</span>
+            </a>
+            <a href="profile.html" class="tab-item">
+                <i class="fas fa-user"></i>
+                <span>我的</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- 视频项模板 -->
+    <template id="video-template">
+        <div class="video-item">
+            <video class="video-player" loop>
+                <source src="" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+                <!-- 右侧操作栏 -->
+                <div class="action-bar">
+                    <div class="user-avatar">
+                        <img src="" alt="用户头像">
+                        <div class="follow-btn">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="action-item like-btn">
+                        <i class="far fa-heart"></i>
+                        <span class="count">0</span>
+                    </div>
+                    <div class="action-item comment-btn">
+                        <i class="fas fa-comment"></i>
+                        <span class="count">0</span>
+                    </div>
+                    <div class="action-item bookmark-btn">
+                        <i class="far fa-bookmark"></i>
+                        <span class="count">0</span>
+                    </div>
+                    <div class="action-item share-btn">
+                        <i class="fas fa-share"></i>
+                        <span class="count">0</span>
+                    </div>
+                </div>
+                <!-- 底部信息 -->
+                <div class="video-info">
+                    <h3 class="video-title-text"></h3>
+                    <p class="video-description"></p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- 视频互动弹窗 -->
+    <div class="video-interaction" style="display: none;">
+        <div class="interaction-header">
+            <span class="comment-count">评论</span>
+            <button class="close-interaction">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="comments-container">
+            <!-- 评论列表 -->
+        </div>
+
+        <div class="comment-input-container">
+            <input type="text" placeholder="说点什么..." class="comment-input">
+            <button class="send-comment">发送</button>
+        </div>
+    </div>
+
+    <!-- 分享弹窗 -->
+    <div class="share-modal" style="display: none;">
+        <div class="share-overlay"></div>
+        <div class="share-content">
+            <h3>分享到</h3>
+            <div class="share-options">
+                <div class="share-option">
+                    <i class="fab fa-weixin"></i>
+                    <span>微信</span>
+                </div>
+                <div class="share-option">
+                    <i class="fab fa-weibo"></i>
+                    <span>微博</span>
+                </div>
+                <div class="share-option">
+                    <i class="fab fa-qq"></i>
+                    <span>QQ</span>
+                </div>
+                <div class="share-option">
+                    <i class="fas fa-link"></i>
+                    <span>复制链接</span>
+                </div>
+                <div class="share-option">
+                    <i class="fas fa-qrcode"></i>
+                    <span>二维码</span>
+                </div>
+                <div class="share-option">
+                    <i class="fas fa-download"></i>
+                    <span>保存本地</span>
+                </div>
+            </div>
+            <button class="share-cancel">取消</button>
+        </div>
+    </div>
+
+    <script src="video.js"></script>
+</body>
+</html> 

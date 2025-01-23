@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>用户主页 - iOS风格应用</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <main class="profile-content">
+            <!-- 返回按钮 -->
+            <div class="profile-header">
+                <div class="profile-top">
+                    <button class="back-btn">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <div class="profile-actions">
+                        <i class="fas fa-share-alt"></i>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+                <div class="profile-main">
+                    <img src="https://picsum.photos/100/100" alt="头像" class="profile-avatar">
+                    <h2 class="profile-name">某某用户</h2>
+                    <p class="profile-id">抖音号：88888888</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">328</span>
+                            <span class="stat-label">关注</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">12.8w</span>
+                            <span class="stat-label">粉丝</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">128.9w</span>
+                            <span class="stat-label">获赞</span>
+                        </div>
+                    </div>
+                    <p class="profile-bio">这是一段个性签名，介绍一下自己吧～</p>
+                    <div class="profile-buttons">
+                        <button class="follow-button">
+                            <i class="fas fa-plus"></i>
+                            <span>关注</span>
+                        </button>
+                        <button class="message-button">
+                            <i class="fas fa-comment"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 作品展示区域 -->
+            <div class="works-container">
+                <!-- 作品分类标签 -->
+                <div class="profile-tabs">
+                    <div class="tab active" data-tab="works">
+                        <i class="fas fa-th"></i>
+                        <span>作品 86</span>
+                    </div>
+                    <div class="tab" data-tab="likes">
+                        <i class="fas fa-heart"></i>
+                        <span>喜欢 2390</span>
+                    </div>
+                </div>
+
+                <!-- 作品网格 -->
+                <div class="works-grid active" id="works-grid">
+                    <!-- 作品列表 -->
+                </div>
+
+                <!-- 喜欢的视频网格 -->
+                <div class="works-grid" id="likes-grid">
+                    <!-- 喜欢的视频列表 -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 视频互动弹窗 -->
+    <div class="video-interaction" style="display: none;">
+        <div class="interaction-header">
+            <span class="comment-count">2816 条评论</span>
+            <button class="close-interaction">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="comments-container">
+            <!-- 评论列表 -->
+            <div class="comment-item">
+                <img src="https://picsum.photos/40/40" alt="用户头像" class="comment-avatar">
+                <div class="comment-content">
+                    <div class="comment-user">用户名</div>
+                    <div class="comment-text">这个视频太棒了！</div>
+                    <div class="comment-info">
+                        <span class="comment-time">2小时前</span>
+                        <span class="comment-reply">回复</span>
+                    </div>
+                    <div class="comment-replies">
+                        <!-- 回复列表 -->
+                        <div class="reply-item">
+                            <img src="https://picsum.photos/41/41" alt="用户头像" class="reply-avatar">
+                            <div class="reply-content">
+                                <div class="reply-user">回复用户</div>
+                                <div class="reply-text">谢谢支持！</div>
+                                <div class="reply-info">
+                                    <span class="reply-time">1小时前</span>
+                                    <span class="reply-action">回复</span>
+                                </div>
+                            </div>
+                            <div class="reply-like">
+                                <i class="far fa-heart"></i>
+                                <span>12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-like">
+                    <i class="far fa-heart"></i>
+                    <span>45</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="comment-input-container">
+            <input type="text" placeholder="说点什么..." class="comment-input">
+            <button class="send-comment">发送</button>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>我的 - iOS风格应用</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <main class="profile-content">
+            <!-- 用户信息区域 -->
+            <div class="profile-header">
+                <div class="profile-top">
+                    <div class="profile-actions">
+                        <i class="fas fa-qrcode"></i>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+                <div class="profile-main">
+                    <img src="https://picsum.photos/100/100" alt="头像" class="profile-avatar">
+                    <h2 class="profile-name">用户名</h2>
+                    <p class="profile-id">抖音号：12345678</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">128</span>
+                            <span class="stat-label">关注</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">8942</span>
+                            <span class="stat-label">粉丝</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">1.2w</span>
+                            <span class="stat-label">获赞</span>
+                        </div>
+                    </div>
+                    <div class="profile-buttons">
+                        <button class="edit-profile-btn">编辑资料</button>
+                        <button class="add-friend-btn">
+                            <i class="fas fa-user-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 作品展示区域 -->
+            <div class="works-container">
+                <!-- 作品分类标签 -->
+                <div class="profile-tabs">
+                    <div class="tab active" data-tab="works">
+                        <i class="fas fa-th"></i>
+                        <span>作品 12</span>
+                    </div>
+                    <div class="tab" data-tab="likes">
+                        <i class="fas fa-heart"></i>
+                        <span>喜欢 238</span>
+                    </div>
+                    <div class="tab" data-tab="favorites">
+                        <i class="fas fa-bookmark"></i>
+                        <span>收藏 56</span>
+                    </div>
+                </div>
+
+                <!-- 作品网格 -->
+                <div class="works-grid active" id="works-grid">
+                    <div class="work-item">
+                        <img src="https://picsum.photos/300/400" alt="作品缩略图">
+                        <span class="work-views">1.2w</span>
+                    </div>
+                    <div class="work-item">
+                        <img src="https://picsum.photos/301/400" alt="作品缩略图">
+                        <span class="work-views">8.5k</span>
+                    </div>
+                    <div class="work-item">
+                        <img src="https://picsum.photos/302/400" alt="作品缩略图">
+                        <span class="work-views">2.3w</span>
+                    </div>
+                </div>
+
+                <!-- 喜欢的视频网格 -->
+                <div class="works-grid" id="likes-grid" style="display: none;">
+                    <div class="work-item">
+                        <img src="https://picsum.photos/303/400" alt="喜欢的视频">
+                        <span class="work-views">3.4w</span>
+                    </div>
+                    <div class="work-item">
+                        <img src="https://picsum.photos/304/400" alt="喜欢的视频">
+                        <span class="work-views">1.8w</span>
+                    </div>
+                </div>
+
+                <!-- 收藏的视频网格 -->
+                <div class="works-grid" id="favorites-grid" style="display: none;">
+                    <div class="work-item">
+                        <img src="https://picsum.photos/305/400" alt="收藏的视频">
+                        <span class="work-views">5.6w</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <nav class="tab-bar">
+            <a href="index.html" class="tab-item">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="discover.html" class="tab-item">
+                <i class="fas fa-compass"></i>
+                <span>发现</span>
+            </a>
+            <a href="notifications.html" class="tab-item">
+                <i class="fas fa-bell"></i>
+                <span>通知</span>
+            </a>
+            <a href="profile.html" class="tab-item active">
+                <i class="fas fa-user"></i>
+                <span>我的</span>
+            </a>
+        </nav>
+
+        <!-- 设置菜单 -->
+        <div class="settings-menu" style="display: none;">
+            <div class="settings-header">
+                <button class="close-settings">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h2>设置</h2>
+            </div>
+            <div class="settings-list">
+                <div class="settings-group">
+                    <h3>账号</h3>
+                    <div class="settings-item">
+                        <span>个人信息</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="settings-item">
+                        <span>隐私设置</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="settings-item">
+                        <span>账号安全</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="settings-group">
+                    <h3>通用</h3>
+                    <div class="settings-item">
+                        <span>通知设置</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="settings-item">
+                        <span>清除缓存</span>
+                        <span class="cache-size">23.5MB</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="settings-group">
+                    <h3>关于</h3>
+                    <div class="settings-item">
+                        <span>用户协议</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="settings-item">
+                        <span>隐私政策</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="settings-item">
+                        <span>版本信息</span>
+                        <span class="version">1.0.0</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <button class="logout-btn">退出登录</button>
+            </div>
+        </div>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html> 
